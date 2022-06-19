@@ -1,0 +1,1 @@
+/Mounts/rbg-storage1/users/ayed/shapepipe_data/inputs/real_SNR/mid_density/L256/shapepipe_run_2022-06-16_16-24-50 mccd_fit_val_runner,merge_starcat_runner,mccd_plots_runner
