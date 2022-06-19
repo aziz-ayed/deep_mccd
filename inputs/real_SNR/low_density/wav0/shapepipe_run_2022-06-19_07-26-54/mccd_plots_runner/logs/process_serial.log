@@ -1,0 +1,56 @@
+19/06/2022 09:55:04 The log file has been set-up.
+19/06/2022 09:55:04 Worker process running with:
+19/06/2022 09:55:04  - Job Name: process
+19/06/2022 09:55:04  - PID: 2443
+19/06/2022 09:55:04  - Threads: 1
+19/06/2022 09:55:04  - Node: rosetta6
+19/06/2022 09:55:04  - System: Linux
+19/06/2022 09:55:04  - Machine: x86_64
+19/06/2022 09:55:04  - Timeout Limit: 356400
+19/06/2022 09:55:04  - Process: [memmap(['/Mounts/rbg-storage1/users/ayed/shapepipe_data/inputs/real_SNR/low_density/wav0/shapepipe_run_2022-06-19_07-26-54/merge_starcat_runner/output/full_starcat-0000000.fits'],
+       dtype='<U167')]
+19/06/2022 09:55:04  - Running module: mccd_plots_runner
+19/06/2022 09:55:04 TOTAL e1 residual RMSE: 8.060591e-03
+
+19/06/2022 09:55:04 TOTAL e2 residual RMSE: 6.883970e-03
+
+19/06/2022 09:55:04 TOTAL R2 residual RMSE: 1.819315e-01
+
+19/06/2022 09:55:10 Bins: e1 residual RMSE: 0.004538
+
+19/06/2022 09:55:20 Bins: e2 residual RMSE: 0.003893
+
+19/06/2022 09:55:30 Bins: R2 residual RMSE: 0.018533
+
+19/06/2022 09:55:39 [('ra', 'dec', 'g1', 'g2', 'psf_g1', 'psf_g2', 'w')]
+19/06/2022 09:55:39 [('ra', 'dec', 'g1', 'g2', 'psf_g1', 'psf_g2', 'w')]
+19/06/2022 09:55:39 [('ra', 'dec', 'sigma', 'psf_g1', 'psf_g2', 'psf_sigma', 'w')]
+19/06/2022 09:55:39 [('ra', 'dec', 'g1', 'g2', 'sigma', 'psf_g1', 'psf_g2', 'psf_sigma', 'w')]
+19/06/2022 09:55:39 [('ra', 'dec', 'sigma', 'psf_g1', 'psf_g2', 'psf_sigma', 'w')]
+19/06/2022 09:55:39  > Computing rho statistics...
+19/06/2022 09:55:39 ERROR: Cannot use given fields: ["{'coords':", "'spherical',", "'metric':", "'Euclidean',", "'sep_units':", "'arcmin',", "'bin_type':", "'Log'}"]
+Traceback (most recent call last):
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/shapepipe/pipeline/worker_handler.py", line 180, in _run_worker
+    with_timeout(self.worker_dict['timeout'], self.w_log.name)(
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/shapepipe/pipeline/timeout.py", line 42, in inner
+    return decorated(*args, **kwargs)
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/shapepipe/pipeline/worker_handler.py", line 194, in _worker_execution
+    self._run_module()
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/shapepipe/pipeline/worker_handler.py", line 215, in _run_module
+    self._stdout, self._stderr = self._module_runner(
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/shapepipe/modules/mccd_plots_runner.py", line 140, in mccd_plots_runner
+    mccd_plots.rho_stats(
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/shapepipe/modules/mccd_package/mccd_plot_utilities.py", line 1508, in rho_stats
+    rho_results = [
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/shapepipe/modules/mccd_package/mccd_plot_utilities.py", line 1509, in <listcomp>
+    rho_stat(stilecat, config=TreeCorrConfig)
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/stile/sys_tests.py", line 819, in __call__
+    return self.getCF('gg', new_data, new_data2, new_random, new_random2,
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/stile/sys_tests.py", line 543, in getCF
+    results = stile.ReadTreeCorrResultsFile(output_file)
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/stile/treecorr_utils.py", line 105, in ReadTreeCorrResultsFile
+    return stile_utils.FormatArray(output, fields=fields)
+  File "/Mounts/rbg-storage1/users/ayed/miniconda3/envs/shapepipe/lib/python3.9/site-packages/stile/stile_utils.py", line 90, in FormatArray
+    raise RuntimeError('Cannot use given fields: '+str(fields))
+RuntimeError: Cannot use given fields: ["{'coords':", "'spherical',", "'metric':", "'Euclidean',", "'sep_units':", "'arcmin',", "'bin_type':", "'Log'}"]
+19/06/2022 09:55:39 The log file has been closed.
